@@ -1,75 +1,121 @@
-
 Customer Churn Analysis (EDA)
 
-Overview
-This project analyzes customer churn in a telecom dataset to understand why customers leave and which groups are at higher risk.
-The focus of this project is on data cleaning, exploratory data analysis, and drawing business insights using Python.
-No machine learning models are used, as the goal is to strengthen core data analysis skills.
+Project Overview
 
-This is my second data analysis project, built after a sales EDA project.
+This project performs Exploratory Data Analysis (EDA) on a telecom customer dataset to understand the key drivers behind customer churn.
 
-Dataset
-The dataset contains around 7000 customer records with 21 columns.
-It includes information such as customer tenure, contract type, monthly charges, total charges, internet services, support services, and demographic indicators.
+The objective is to analyze customer behavior, identify high-risk groups, and extract actionable business insights using Python. No machine learning models are used in this project. The focus is on data cleaning, structured analysis, and business interpretation.
 
-The target column is Churn, where
-1 means the customer left
-0 means the customer stayed
+This is the second data analysis project, built after a sales EDA project.
 
-Tools Used
-Python
-Pandas
-Matplotlib
-Seaborn
-Jupyter Notebook
 
-Data Cleaning
+Problem Statement
+
+Customer churn directly impacts company revenue. Understanding which customers are likely to leave and why is critical for improving retention strategies. This project analyzes churn patterns based on tenure, pricing, contracts, services, and demographics.
+
+
+Dataset Information
+
+- Approximately 7000 customer records
+- 21 columns
+- Features include:
+  tenure
+  contract type
+  monthly charges
+  total charges
+  internet services
+  support services
+  senior citizen indicator
+  and more
+
+Target Variable:
+Churn
+1 = Customer left
+0 = Customer stayed
+
+
+Tools and Technologies Used
+
+- Python
+- Pandas
+- Matplotlib
+- Seaborn
+- Jupyter Notebook
+
+
+Data Cleaning and Preprocessing
+
 The following preprocessing steps were performed:
 
-CustomerID was removed as it is only an identifier and not useful for analysis.
-TotalCharges was converted from object type to numeric, with missing values handled for new customers.
-Yes/No columns were converted into binary values (0 and 1).
-Inconsistent categorical values such as "No internet service" were standardized.
+- Removed CustomerID as it is only an identifier
+- Converted TotalCharges from object type to numeric
+- Handled missing values for new customers
+- Converted Yes/No columns into binary format (0 and 1)
+- Standardized inconsistent categorical values such as "No internet service"
+
 
 Key Questions Explored
 
-Does customer tenure affect churn?
-Are higher monthly charges associated with churn?
-How does contract type influence churn?
-Does internet service type impact churn?
-Do support services such as TechSupport and OnlineSecurity reduce churn?
-Do senior citizens churn more than non-senior customers?
+- Does customer tenure affect churn?
+- Are higher monthly charges associated with churn?
+- How does contract type influence churn?
+- Does internet service type impact churn?
+- Do support services such as TechSupport and OnlineSecurity reduce churn?
+- Do senior citizens churn more than non-senior customers?
+
 
 Main Insights
 
-Contract type is the strongest driver of churn.
-Month-to-month customers show very high churn, while long-term contract customers are much more stable.
+- Contract type is the strongest driver of churn. Month-to-month customers show significantly higher churn compared to one-year and two-year contracts.
 
-Churn is concentrated in early customer tenure.
-Customers who leave usually do so within the first few months, while long-term customers tend to stay.
+- Churn is concentrated in early tenure. Customers who leave typically do so within the first few months.
 
-Higher monthly charges are linked to higher churn.
-Customers paying more per month are more likely to leave, especially when expectations are not met.
+- Higher monthly charges are linked to higher churn rates.
 
-Internet service type strongly affects churn.
-Fiber optic customers have the highest churn, followed by DSL users.
-Customers without internet service churn the least.
+- Fiber optic customers have the highest churn compared to DSL and customers without internet service.
 
-Support services reduce churn significantly.
-Customers without TechSupport or OnlineSecurity churn at nearly double the rate of those who have them.
+- Customers without TechSupport or OnlineSecurity churn at nearly double the rate of those who have these services.
 
-Senior citizens churn more than non-senior customers.
-This effect appears to be influenced by pricing, contract type, and support needs rather than age alone.
+- Senior citizens show higher churn rates, though this appears influenced by pricing, contract type, and support needs rather than age alone.
+
 
 Business Takeaways
 
-Retention efforts should focus on month-to-month customers.
-The early customer lifecycle is critical and needs better onboarding and support.
-Support services should be bundled or promoted for high-end plans.
-Senior customers may benefit from simpler plans and stronger support.
-Retention budgets should not be wasted on low-risk long-term customers.
+- Focus retention strategies on month-to-month customers.
+- Improve onboarding experience during the early customer lifecycle.
+- Bundle or promote support services for high-value plans.
+- Provide better assistance and simpler plans for senior customers.
+- Allocate retention budget strategically toward high-risk segments.
+
+
+Skills Demonstrated
+
+- Data Cleaning and Transformation
+- Categorical Encoding
+- GroupBy and Aggregation
+- Business Insight Extraction
+- Visualization and Interpretation
+- Risk Segmentation Analysis
+
+
+Project Structure
+
+customer-churn-analysis/
+|
+|-- churn_analysis.ipynb
+|-- telecom_churn.csv
+|-- README.md
+
+
+How to Run
+
+1. Clone the repository
+2. Install required libraries:
+   pip install pandas matplotlib seaborn
+3. Open Jupyter Notebook:
+   jupyter notebook churn_analysis.ipynb
+
 
 Conclusion
-This analysis shows that customer churn is not random.
-It is driven mainly by contract commitment, pricing, service quality, and access to support.
-Simple exploratory data analysis techniques were sufficient to uncover strong and actionable business insights.
+
+This analysis demonstrates that customer churn is not random. It is strongly influenced by contract commitment, pricing, service type, and access to support services. Structured exploratory analysis was sufficient to uncover clear and actionable business insights.
