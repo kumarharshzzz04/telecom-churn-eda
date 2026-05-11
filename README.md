@@ -1,4 +1,5 @@
 Telecom Customer Churn Analysis
+
 A telecom company was losing customers without knowing who, when, or why. This analysis of 7,000+ customer records identified the exact segments driving churn — giving the business a clear, prioritized retention strategy.
 What I found that actually matters:
 
